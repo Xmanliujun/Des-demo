@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RvcViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -15,6 +15,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    RvcViewController * rvc = [[RvcViewController alloc] init];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:rvc];
+    self.window.rootViewController = nav;
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
